@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff583, #b0a101);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .dashboard {
+            background-color: #f4f6fb;
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #4b4a29;
+            text-align: center;
+        }
+
+        /* GRID LAYOUT */
+        .weather-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        /* LARGE TEMPERATURE CARD */
+        .main-temp {
+            grid-row: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .temp {
+            font-size: 64px;
+            font-weight: bold;
+            color: #2e2100;
+        }
+
+        .location {
+            font-size: 18px;
+            color: #4b4a29;
+            margin-top: 10px;
+        }
+
+        /* METRIC CARDS */
+        .metric-title {
+            font-size: 14px;
+            color: #4b4a29;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: bold;
+            color:#4b4a29;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .weather-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-temp {
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Weather Dashboard</h2>
+
+    <div class="weather-grid">
+        <!-- Main Temperature Card -->
+        <div class="card main-temp">
+            <div class="temp">28°C</div>
+            <div class="location">Mumbai, India</div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="card">
+            <div class="metric-title">Humidity</div>
+            <div class="metric-value">65%</div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">Wind</div>
+            <div class="metric-value">12 km/h</div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">Feels Like</div>
+            <div class="metric-value">31°C</div>
+        </div>
+
+        <div class="card">
+            <div class="metric-title">Forecast</div>
+            <div class="metric-value">Sunny</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

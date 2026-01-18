@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sidebar Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f4f6fb;
+        }
+
+        /* MOBILE-FIRST GRID */
+        .layout {
+            display: grid;
+            grid-template-areas:
+                "sidebar"
+                "content";
+            grid-template-columns: 1fr;
+        }
+
+        /* SIDEBAR (TOP BAR ON MOBILE) */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #393838;
+            color: white;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .sidebar h1 {
+            margin: 0 0 10px;
+            font-size: 30px;
+        }
+
+        .sidebar a {
+            display: inline-block;
+            margin-right: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding-top: 15px;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTENT */
+        .content {
+            grid-area: content;
+            padding: 25px;
+        }
+
+        .content h1 {
+            color: #202020;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* DESKTOP BREAKPOINT */
+        @media (min-width: 768px) {
+            .layout {
+                grid-template-areas: "sidebar content";
+                grid-template-columns: 240px 1fr;
+            }
+
+            .sidebar {
+                height: 100vh;
+                position: sticky;
+                top: 0;
+            }
+
+            .sidebar a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+    <aside class="sidebar">
+        <h1>Menu</h1>
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+    </aside>
+
+    <main class="content">
+        <h1>Main Content</h1>
+        <p>
+            This layout demonstrates a responsive sidebar that adapts gracefully
+            across screen sizes. On mobile devices, the sidebar becomes a top
+            navigation bar, ensuring easy access without consuming horizontal
+            space.
+        </p>
+
+        <p>
+            On larger screens, the sidebar remains sticky, allowing users to
+            navigate while scrolling through content. This balance between
+            structure and flexibility creates a comfortable reading experience.
+        </p>
+
+        <p>
+            Scroll down to observe the sticky behavior in action. The sidebar
+            stays in place, quietly supporting navigation without demanding
+            attention.
+        </p>
+
+        <p style="margin-top: 600px;">
+            End of content.
+        </p>
+    </main>
+</div>
+
+</body>
+</html>
