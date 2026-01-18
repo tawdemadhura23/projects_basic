@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card</title>
+
+    <style>
+        body{
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f4ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .card{
+            background: white;
+            width: 90%;
+            max-width: 320px;          /* responsive width */
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .avatar{
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;       /* rounded corners */
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        h2{
+            margin: 10px 0 5px;
+            color: #313676;
+        }
+
+        .role{
+            color: #6c7ae0;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bio{
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .buttons button{
+            padding: 8px 14px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #313676;
+            color: white;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .buttons button:hover{
+            background-color: #6c7ae0;   /* hover effect */
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kqFSSMbDhBwCWVjSx_tJ-gvAInZqKQ2tSRK-sBFjoaw7A=s900-c-k-c0x00ffffff-no-rj" alt="Profile Image" class="avatar">
+
+    <h2>Madhura Tawde</h2>
+    <div class="role">Web Developer</div>
+
+    <p class="bio">
+        Passionate about building clean, responsive websites and learning new technologies every day.
+        Loves art and music.
+    </p>
+
+    <div class="buttons">
+        <button>View Profile</button>
+        <button>Contact</button>
+    </div>
+</div>
+
+</body>
+</html>
